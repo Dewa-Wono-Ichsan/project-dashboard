@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+header {
+    grid-column: 2;
+}
+
+.sidebar {
+    grid-row: 1 / 3;
+}
