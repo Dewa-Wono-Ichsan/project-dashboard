@@ -3,11 +3,34 @@ body {
     height: 100dvh;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
 }
 
 header {
     grid-column: 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+header > .left {
+    display: grid;
+    grid-template-rows: 5rem 1fr;
+    align-items: start;
+}
+
+input[type='search'] {
+    width: 70%;
+}
+
+header > .right, 
+.right > .btn {
+    display: grid;
+}
+
+.right > .btn {
+    grid-template-columns: repeat(auto-fit, 70px);
+    grid-template-rows: 20px;
+    gap: calc(10%);
 }
 
 .sidebar {
