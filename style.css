@@ -18,11 +18,47 @@ header {
 header > .left {
     display: grid;
     grid-template-rows: 5rem 1fr;
-    align-items: start;
+}
+
+.left > div:first-child {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+}
+
+.left > div > svg {
+    height: 30px;
 }
 
 input[type='search'] {
     width: 70%;
+    height: 30px;
+}
+
+.left > div:last-child {
+    display: grid;
+    grid-template-columns: 100px 300px;
+    grid-template-rows: 1fr;
+}
+
+.left > div > div {
+    display: grid;
+}
+
+.left > div > img {
+    height: 50px;
+}
+
+.right > div:first-child {
+    display: grid;
+    grid-template-columns: 50px 60px calc(100% - (50px + 60px));
+}
+
+.right > div > svg {
+    height: 30px;
+}
+
+.right > div > img {
+    height: 50px;
 }
 
 header > .right, 
@@ -33,25 +69,46 @@ header > .right,
 .right > .btn {
     grid-template-columns: repeat(auto-fit, 70px);
     grid-template-rows: 20px;
-    gap: calc(10%);
+    gap: calc(10% - 15px);
 }
 
 .sidebar {
     grid-row: 1 / 3;
     display: grid;
-    grid-template-rows: 1fr 3fr 6fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.sidebar > div:first-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.sidebar > div > svg,
+.home > div > svg,
+.settings> div > div > svg {
+    height: 30px;
 }
 
 .home {
     display: grid;
-    grid-template-rows: repeat(auto-fit, 1.5rem);
+    grid-template-rows: repeat(6, 3rem);
+    gap: 20px;
+}
+
+.home > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.settings > div {
+    display: grid;
+    grid-template-rows: repeat(3, 3rem);
     gap: 10px;
 }
 
-.settings {
+.settings > div > div {
     display: grid;
-    grid-template-rows: repeat(auto-fit, 1.5rem);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 main {
@@ -73,6 +130,10 @@ main {
     gap: 30px;
 }
 
+.widget > svg {
+    height: 30px;
+}
+
 .announcements {
     display: grid;
     grid-template-rows: 40px 1fr;
@@ -90,4 +151,16 @@ main {
 .trending > .container-content{
     display: grid;
     grid-template-rows: repeat(4, 1fr);
+}
+
+.trending > .container-content > div {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    align-items: center;
+    align-content: center;
+}
+
+.trending > .container-content > div > img {
+    height: 50px;
+    grid-row: span 2;
 }
