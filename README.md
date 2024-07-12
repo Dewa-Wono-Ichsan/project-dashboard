@@ -5,5 +5,5 @@ Create dashboard for exercise according to https://www.theodinproject.com/lesson
 # icons-source
 https://pictogrammers.com/library/mdi/
 
-#font-source
+# font-source
 https://fonts.google.com/specimen/Work+Sans?preview.size=27
